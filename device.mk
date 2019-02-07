@@ -447,6 +447,10 @@ PRODUCT_PACKAGES += \
     libxml2 \
     libprotobuf-cpp-full
 
+# RetroMusic
+PRODUCT_PACKAGES += \
+    RetroMusic
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson
