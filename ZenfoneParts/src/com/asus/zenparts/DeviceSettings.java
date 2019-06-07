@@ -71,6 +71,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private VibrationSeekBarPreference mVibrationStrength;
     private Preference mKcal;
     private SecureSettingListPreference mSPECTRUM;
+    private Preference mAmbientPref;
     private SecureSettingSwitchPreference mEnableDirac;
     private SecureSettingListPreference mHeadsetType;
     private SecureSettingListPreference mPreset;
@@ -111,6 +112,16 @@ public class DeviceSettings extends PreferenceFragment implements
         mSPECTRUM.setValue(FileUtils.getStringProp(SPECTRUM_SYSTEM_PROPERTY, "0"));
         mSPECTRUM.setSummary(mSPECTRUM.getEntry());
         mSPECTRUM.setOnPreferenceChangeListener(this);
+
+	mAmbientPref = findPreference("ambient_display_gestures");
+        mAmbientPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                Intent intent = new Intent(getContext(), TouchscreenGesturePreferenceActivity.class);
+                startActivity(intent);
+                return true;
+            }
+        });
 
         boolean enhancerEnabled;
         try {

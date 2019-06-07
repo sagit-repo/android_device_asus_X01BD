@@ -23,6 +23,9 @@ import android.provider.Settings;
 
 import com.asus.zenparts.kcal.Utils;
 
+import com.asus.zenparts.SensorsDozeService;
+import com.asus.zenparts.FileUtils;
+
 public class BootReceiver extends BroadcastReceiver implements Utils {
 
     public void onReceive(Context context, Intent intent) {
