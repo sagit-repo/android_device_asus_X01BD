@@ -85,5 +85,20 @@
             android:name=".DiracService"
             android:enabled="true"
             android:stopWithTask="false" />
+
+        <!-- stub to ensure its loaded - DO NOT REMOVE -->
+
+        <activity android:name=".KeyHandler" />
+
+        <activity
+            android:name=".settings.ScreenOffGestureSettings"
+	    android:exported="true"
+            android:label="@string/zenmotions"
+            android:theme="@style/DeviceSettings">
+          <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+          </intent-filter>
+	</activity>
+
     </application>
 </manifest>
