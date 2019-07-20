@@ -45,8 +45,6 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/asus/sdm660
 TARGET_KERNEL_CONFIG := etherious_defconfig
 TARGET_KERNEL_VERSION := 4.4
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := 9.0.5
 
 # Assert
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
@@ -103,7 +101,7 @@ USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
+#BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sdm660
@@ -187,6 +185,12 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
+# HALS
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/qcom/display \
+    hardware/qcom/media \
+    hardware/qcom/audio
+
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
@@ -257,7 +261,7 @@ BOARD_SECCOMP_POLICY := $(DEVICE_PATH)/seccomp
 VENDOR_SECURITY_PATCH := 2019-05-01
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
+include device/qcom/sepolicy/Android.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 BOARD_SEPOLICY_VERS := 28.0
 SELINUX_IGNORE_NEVERALLOWS := true
@@ -284,7 +288,6 @@ WIFI_DRIVER_OPERSTATE_PATH := "/sys/class/net/wlan0/operstate"
 WIFI_DRIVER_STATE_CTRL_PARAM := "/sys/kernel/boot_wlan/boot_wlan"
 WIFI_DRIVER_STATE_OFF := 0
 WIFI_DRIVER_STATE_ON := 1
-WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 # inherit from the proprietary version
 -include vendor/asus/X01BD/BoardConfigVendor.mk
