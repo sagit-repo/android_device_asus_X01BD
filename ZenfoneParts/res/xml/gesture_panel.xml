@@ -50,7 +50,7 @@
             android:persistent="false"
             android:title="@string/touchscreen_gesture_haptic_feedback"
             android:summary="@string/touchscreen_gesture_haptic_feedback_summary"
-      	    android:icon="@drawable/ic_haptic" />
+      	    android:icon="@drawable/ic_vibrate" />
 
     </PreferenceCategory>
 
