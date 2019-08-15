@@ -176,11 +176,11 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.1-service.clearkey
 
 # FM
-PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
-    qcom.fmradio \
-    android.hardware.broadcastradio@1.0-impl
+#PRODUCT_PACKAGES += \
+#    FM2 \
+#    libqcomfm_jni \
+#    qcom.fmradio \
+#    android.hardware.broadcastradio@1.0-impl
 
 # Doze mode
 PRODUCT_PACKAGES += \
