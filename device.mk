@@ -296,6 +296,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
 
+# Prebuilt Apps
+PRODUCT_PACKAGES += \
+    Calendar \
+    Messaging
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
