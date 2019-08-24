@@ -299,7 +299,9 @@ PRODUCT_PACKAGES += \
 # Prebuilt Apps
 PRODUCT_PACKAGES += \
     Calendar \
-    Messaging
+    Messaging \
+    Longshot \
+    Recorder
 
 # Health
 PRODUCT_PACKAGES += \
