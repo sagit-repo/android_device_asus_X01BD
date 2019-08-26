@@ -277,6 +277,10 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0-service \
     SecureElement
 
+# OOS ScreenRecorder
+PRODUCT_PACKAGES += \
+    ScreenRecorder
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
