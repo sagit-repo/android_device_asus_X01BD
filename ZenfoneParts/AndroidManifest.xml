@@ -106,6 +106,16 @@
                 <action android:name="android.intent.action.MAIN" />
           </intent-filter>
 	</activity>
+        <service
+            android:name=".ZenpartsTile"
+            android:enabled="true"
+            android:icon="@drawable/qs_asus"
+            android:label="@string/advanced_settings"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
         <receiver android:name="com.asus.zenparts.Startup" >
             <intent-filter android:priority="1000" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
