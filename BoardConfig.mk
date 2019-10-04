@@ -170,6 +170,12 @@ USE_DEVICE_SPECIFIC_GPS := true
 TARGET_NO_RPC := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 
+# HALS
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/qcom/display \
+    hardware/qcom/media \
+    hardware/qcom/audio
+
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
@@ -233,7 +239,7 @@ BOARD_SECCOMP_POLICY := $(DEVICE_PATH)/seccomp
 VENDOR_SECURITY_PATCH := 2018-06-05
 
 # SELinux
-#include device/qcom/sepolicy-legacy-um/sepolicy.mk
+#include device/qcom/sepolicy/Android.mk
 #BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-minimal
 
@@ -252,7 +258,6 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 WIFI_DRIVER_OPERSTATE_PATH := "/sys/class/net/wlan0/operstate"
-WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 # inherit from the proprietary version
 -include vendor/asus/X01BD/BoardConfigVendor.mk
