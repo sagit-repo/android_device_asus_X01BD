@@ -304,6 +304,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
+# Recorder
+PRODUCT_PACKAGES += \
+    Recorder
+
 # Radio
 PRODUCT_PACKAGES += \
     rild \
