@@ -25,6 +25,9 @@ $(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 # Official Havoc-OS
 export export HAVOC_BUILD_TYPE=Official
 
+# Google Connectivity Services
+TARGET_INCLUDE_WIFI_EXT := true
+
 # Inherit from X01BD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
