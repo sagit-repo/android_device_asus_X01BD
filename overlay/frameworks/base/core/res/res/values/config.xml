@@ -731,4 +731,7 @@
         <item>com.android.touch.gestures.KeyHandler</item>
     </string-array>
 
+    <!-- Smart Charging -->
+    <bool name="config_supportSmartCharging">true</bool>
+
 </resources>
