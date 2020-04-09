@@ -25,8 +25,6 @@
     <uses-permission android:name="android.permission.INJECT_EVENTS"/>
     <uses-permission android:name="android.permission.CAMERA" />
 
-    <protected-broadcast android:name="com.asus.zenparts.UPDATE_SETTINGS" />
-
     <uses-sdk android:minSdkVersion="27" />
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
@@ -127,7 +125,7 @@
         </service>
 
         <!-- stub to ensure its loaded - DO NOT REMOVE -->
-
+<!--
         <activity android:name=".KeyHandler" />
 
         <activity
@@ -135,7 +133,7 @@
             android:label="@string/touchscreen_gesture_settings_title"
             android:theme="@style/CustomOptionsTheme">
         </activity>
-
+-->
         <service
             android:name="com.asus.zenparts.LogTile"
             android:icon="@drawable/ic_qs_log"
